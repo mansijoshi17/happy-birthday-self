@@ -8,9 +8,11 @@ import { ethers } from "ethers";
 
 // SelfHappyBirthday contract address deployed on Celo Alfajores testnet
 const HAPPY_BIRTHDAY_CONTRACT_ADDRESS =
-  "0x23da8a4adfb35006927715a21599fd7f0820805a";
+  "0xf913b6a387e15f0fcdbb1d8ce4c16c34927c0542";
 
-console.log(HAPPY_BIRTHDAY_CONTRACT_ADDRESS);
+// const HUMAN_PROOF_CONTRACT_ADDRESS =
+//   "0xa5564fe4ad705cfa5fe159ed7529aa172188afe9";
+// const humanProofScope = "proof-of-human";
 
 function Birthday() {
   const [input, setInput] = useState("");
@@ -25,7 +27,7 @@ function Birthday() {
 
     const app = new SelfAppBuilder({
       version: 2,
-      appName: "Happy Birthday Reward",
+      appName: "Human Proof",
       scope: "bday-reward",
       endpoint: `${HAPPY_BIRTHDAY_CONTRACT_ADDRESS}`,
       endpointType: "staging_celo",
